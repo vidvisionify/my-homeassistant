@@ -156,6 +156,9 @@
       icon: mdi:amazon
     binary_sensor.echo:
       icon: mdi:amazon
+    binary_sensor.moto_x:
+      icon: mdi:cellphone
+
 
     binary_sensor.pandorica:
       icon: mdi:desktop-tower
@@ -173,3 +176,39 @@
       icon: mdi:raspberrypi
     binary_sensor.xerox:
       icon: mdi:printer
+    sensor.steam_76561198083742776:
+      icon: mdi:steam
+      friendly_name: Phil's Steam
+
+    switch.docker_mcmyadmin2:
+      icon: mdi:minecraft
+    switch.docker_portainer:
+      icon: mdi:inbox-arrow-up
+    switch.docker_nextcloud:
+      icon: mdi:cloud
+    switch.docker_plex:
+      icon: mdi:plex
+    switch.docker_transmission:
+      icon: mdi:download-network
+
+    sensor.transmission_status:
+      friendly_name: Transmission
+      icon: mdi:download-network
+    sensor.transmission_down_speed:
+      friendly_name: Download
+      icon: mdi:arrow-down-bold
+    sensor.transmission_up_speed:
+      friendly_name: Upload
+      icon: mdi:arrow-up-bold
+
+    sensor.speedtest_ping:
+      friendly_name: Ping
+    sensor.speedtest_upload:
+      friendly_name: Upload
+      icon: mdi:arrow-up-bold
+    sensor.fastcom_download:
+      friendly_name: Download
+      icon: mdi:arrow-down-bold
+
+    automation.notify__if_garagepi_is_down:
+      icon: mdi:bell-ring

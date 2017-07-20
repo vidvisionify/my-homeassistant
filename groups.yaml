@@ -59,6 +59,7 @@ pj_bedroom:
   - automation.turn_off_fan_in_2_hours
   - automation.bedroom__closet_off_in_2_minutes
   - media_player.pjs_chromecast
+  - media_player.phils_room
 
 pj_status:
   name: PJ Status
@@ -66,6 +67,7 @@ pj_status:
   - sensor.find_location
   - sensor.vidvisionifylps
   - sensor.steam_76561198039826665
+  - media_player.galaxy_s7
 
 pj_phone:
   name: Galaxy S7
@@ -143,6 +145,7 @@ basement_view:
   - binary_sensor.xbox_360
   - binary_sensor.echo
   - binary_sensor.fire_stick
+  - binary_sensor.moto_x
   - group.pandorica
   - group.basement
   - media_player.aftt
@@ -158,6 +161,5 @@ server_view:
   - group.internetspeeds
   - binary_sensor.xerox
   - binary_sensor.garagepi
-  - binary_sensor.moto_x
   - sensor.steam_76561198083742776
   - automation.notify__if_garagepi_is_down
