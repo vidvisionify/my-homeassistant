@@ -145,6 +145,7 @@ basement_view:
   - binary_sensor.fire_stick
   - group.pandorica
   - group.basement
+  - media_player.aftt
   - media_player.spotify
 
 server_view:

@@ -41,6 +41,8 @@
     sensor.fedex:
       friendly_name: Fedex Packages
       icon: mdi:package
+    binary_sensor.mom_iphone:
+      icon: mdi:apple
 
     sensor.dark_sky_apparent_temperature:
       friendly_name: Feels Like
@@ -62,6 +64,8 @@
 ######################
     binary_sensor.penn:
       icon: mdi:laptop
+    binary_sensor.steam_link:
+      icon: mdi:steam
     light.sengled_e11g13_0306449a_1:
       friendly_name: Desk
       icon: mdi:spotlight-beam
@@ -106,7 +110,7 @@
       icon: mdi:timer
     automation.turn_off_fan_in_2_hours:
       icon: mdi:fan
-	  
+
 ######################
 ###### Basement ######
 ######################
@@ -136,6 +140,9 @@
         pin: true
         off_when_min: true
         report_when_not_changed: false
+
+    switch.candles:
+      icon: mdi:candle
 
     binary_sensor.ps3:
       icon: mdi:playstation
