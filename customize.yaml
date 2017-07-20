@@ -34,17 +34,14 @@
       icon: mdi:mailbox
     sensor.usps_packages:
       friendly_name: USPS Packages
-      icon: https://zipshipit.com/wp-content/uploads/2015/12/usps_logo_square.png
+      icon: mdi:package
     sensor.ups:
       friendly_name: UPS Packages
-      icon: https://home-assistant.io/images/supported_brands/ups.png
+      icon: mdi:package
     sensor.fedex:
       friendly_name: Fedex Packages
-      icon: https://11tcma2eyqgmz6zyt1x6na8n-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/fedex_logo_feature.png
+      icon: mdi:package
 
-######################
-###### Weather #######
-######################
     sensor.dark_sky_apparent_temperature:
       friendly_name: Feels Like
     sensor.dark_sky_daily_high_apparent_temperature:
@@ -61,8 +58,27 @@
       friendly_name: Currently
 
 ######################
-##### Open/Close #####
+####### Bedroom ######
 ######################
+    binary_sensor.penn:
+      icon: mdi:laptop
+    light.sengled_e11g13_0306449a_1:
+      friendly_name: Desk
+      icon: mdi:spotlight-beam
+      emulated_hue: true
+      emulated_hue_name: "computer lamp"
+      custom_ui_state_card: custom-ui
+      state_card_mode: single-line
+      hide_control: false
+      slider_theme:
+        min: 0
+        max: 255
+        pin: true
+        off_when_min: true
+        report_when_not_changed: false
+    light.sengled_e11g13_0306574f_1:
+      friendly_name: Closet
+      emulated_hue: true
     sensor.visonic_mct340_e_0b02b650_1:
       friendly_name: Bedroom Temperature
       hidden: true
@@ -86,8 +102,13 @@
     binary_sensor.visonic_mct340_e_0b02c60a_1:
       friendly_name: Closet
 
+    automation.bedroom__closet_off_in_2_minutes:
+      icon: mdi:timer
+    automation.turn_off_fan_in_2_hours:
+      icon: mdi:fan
+	  
 ######################
-####### Lights #######
+###### Basement ######
 ######################
     light.sengled_z01cia19nae26_0303d1dd_1:
       friendly_name: Nightstand
@@ -103,25 +124,6 @@
         off_when_min: true
         report_when_not_changed: false
 
-    light.sengled_e11g13_0306449a_1:
-      friendly_name: Desk
-      icon: mdi:spotlight-beam
-      emulated_hue: true
-      emulated_hue_name: "computer lamp"
-      custom_ui_state_card: custom-ui
-      state_card_mode: single-line
-      hide_control: false
-      slider_theme:
-        min: 0
-        max: 255
-        pin: true
-        off_when_min: true
-        report_when_not_changed: false
-
-    light.sengled_e11g13_0306574f_1:
-      friendly_name: Closet
-      emulated_hue: true
-
     light.desk:
       friendly_name: Desk
       icon: mdi:lamp
@@ -135,6 +137,32 @@
         off_when_min: true
         report_when_not_changed: false
 
+    binary_sensor.ps3:
+      icon: mdi:playstation
+    binary_sensor.xbox_360:
+      icon: mdi:xbox
+    binary_sensor.switch:
+      icon: mdi:nintendo-switch
+    binary_sensor.wii_u:
+      icon: mdi:wiiu
+    binary_sensor.fire_stick:
+      icon: mdi:amazon
+    binary_sensor.echo:
+      icon: mdi:amazon
+
+    binary_sensor.pandorica:
+      icon: mdi:desktop-tower
+    sensor.clicks:
+      icon: mdi:mouse
+    sensor.keys_pressed:
+      icon: mdi:keyboard
+    sensor.rendering_mode:
+      icon: mdi:video
+
 ######################
-###### Unsorted ######
+####### Server #######
 ######################
+    binary_sensor.garagepi:
+      icon: mdi:raspberrypi
+    binary_sensor.xerox:
+      icon: mdi:printer
