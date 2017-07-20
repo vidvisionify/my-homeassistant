@@ -37,6 +37,7 @@ basement:
   - light.sengled_z01cia19nae26_0303d1dd_1
   - switch.candles
   - switch.ip_webcam_torch
+  - switch.ip_webcam_night_vision
   - camera.ip_webcam
 
 pandorica:
@@ -46,6 +47,7 @@ pandorica:
   - sensor.clicks
   - sensor.keys_pressed
   - sensor.rendering_mode
+  - media_player.plex_web_chrome
 
 pj_bedroom:
   name: Bedroom
@@ -113,6 +115,7 @@ home_view:
   entities:
   - device_tracker.iphone
   - device_tracker.phone_s7
+  - binary_sensor.mom_iphone
   - group.home
   - group.mail
   - group.weather
@@ -125,6 +128,7 @@ bedroom_view:
   - binary_sensor.visonic_mct340_e_0b02b650_1
   - binary_sensor.visonic_mct340_e_0b02c60a_1
   - binary_sensor.penn
+  - binary_sensor.steam_link
   - group.pj_bedroom
   - group.pj_phone
 
@@ -137,6 +141,8 @@ basement_view:
   - binary_sensor.switch
   - binary_sensor.wii_u
   - binary_sensor.xbox_360
+  - binary_sensor.echo
+  - binary_sensor.fire_stick
   - group.pandorica
   - group.basement
   - media_player.spotify
@@ -149,5 +155,8 @@ server_view:
   - group.venus
   - group.docker
   - group.internetspeeds
+  - binary_sensor.xerox
   - binary_sensor.garagepi
+  - binary_sensor.moto_x
   - sensor.steam_76561198083742776
+  - automation.notify__if_garagepi_is_down

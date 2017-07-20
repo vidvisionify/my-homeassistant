@@ -15,6 +15,34 @@
       hidden: true
 
 ######################
+##### Home View ######
+######################
+    binary_sensor.alarm:
+      icon: mdi:security-home
+    binary_sensor.ring_front_door_ding:
+      friendly_name: Doorbell Ring
+      icon: mdi:bell-ring
+    binary_sensor.ring_front_door_motion:
+      friendly_name: Doorbell Motion
+    binary_sensor.den_tv:
+      icon: mdi:television
+    sensor.comed_current_hour_average_price:
+      friendly_name: Comed Hour Price
+      icon: mdi:power-plug
+    sensor.usps_mail:
+      friendly_name: Today's Mail
+      icon: mdi:mailbox
+    sensor.usps_packages:
+      friendly_name: USPS Packages
+      icon: https://zipshipit.com/wp-content/uploads/2015/12/usps_logo_square.png
+    sensor.ups:
+      friendly_name: UPS Packages
+      icon: https://home-assistant.io/images/supported_brands/ups.png
+    sensor.fedex:
+      friendly_name: Fedex Packages
+      icon: https://11tcma2eyqgmz6zyt1x6na8n-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/fedex_logo_feature.png
+
+######################
 ###### Weather #######
 ######################
     sensor.dark_sky_apparent_temperature:
@@ -24,9 +52,9 @@
     sensor.dark_sky_daily_low_apparent_temperature:
       friendly_name: Low
     sensor.dark_sky_daily_summary:
-      friendly_name: Today
+      friendly_name: This Week
     sensor.dark_sky_hourly_summary:
-      friendly_name: Later Today
+      friendly_name: Today
     sensor.dark_sky_humidity:
       friendly_name: Humidity
     sensor.dark_sky_minutely_summary:
@@ -106,3 +134,7 @@
         pin: true
         off_when_min: true
         report_when_not_changed: false
+
+######################
+###### Unsorted ######
+######################

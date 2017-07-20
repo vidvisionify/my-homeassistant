@@ -55,3 +55,30 @@
 - platform: ping
   host: 10.0.0.216
   name: Xbox 360
+
+- platform: ping
+  host: 10.0.0.155
+  name: Fire Stick
+
+- platform: ping
+  host: 10.0.0.54
+  name: Echo
+
+##########################
+####### Unsorted #########
+##########################
+- platform: ping
+  host: 10.0.0.122
+  name: Xerox
+
+- platform: ping
+  host: 10.0.0.143
+  name: Moto X
+
+- platform: ping
+  host: 10.0.0.231
+  name: Steam Link
+
+- platform: ping
+  host: 10.0.0.166
+  name: Mom iPhone
