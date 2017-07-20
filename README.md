@@ -10,5 +10,6 @@
 * Yeelight RGB Bulb
 * TP-Link Smart Switch
 ### Zigbee
-* Sengled Element Classic Bulb x 2
+* Sengled Element Classic Bulb x2
 * Sengled Element Touch Bulb
+* Visonic Window/Door Sensor - MCT-340 E x4
