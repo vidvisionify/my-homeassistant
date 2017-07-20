@@ -1,0 +1,3 @@
+- platform: file
+  name: Rendering Mode
+  file_path: /mnt/Sulfur/Files/Autohotkey/Rendering.txt

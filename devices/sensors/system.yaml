@@ -1,0 +1,8 @@
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home/phil
+    - type: disk_free
+      arg: /mnt/Sulfur
+    - type: memory_free
+    - type: since_last_boot

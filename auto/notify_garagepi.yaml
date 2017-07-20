@@ -1,0 +1,10 @@
+- alias: Notify - If GaragePi is down
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garagepi
+    to: "off"
+  action:
+      - service: notify.pj_phone
+        data:
+          message: >
+            GaragePi is down! Garage can only be opened with physical buttons.

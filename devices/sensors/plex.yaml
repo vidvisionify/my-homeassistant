@@ -1,0 +1,7 @@
+- platform: plex
+  name: Plex
+  host: 10.0.0.82
+  port: 32400
+  username: !secret plex_user
+  password: !secret plex_pass
+  server: Venus

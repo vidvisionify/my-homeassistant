@@ -1,0 +1,35 @@
+- platform: command_line
+  switches:
+    candles:
+      command_on: !secret candles_on
+      command_off: !secret candles_off
+      friendly_name: Candles
+    docker_portainer:
+      command_on: sudo docker start portainer
+      command_off: sudo docker stop portainer
+      command_state: "docker ps | grep portainer"
+      friendly_name: Portainer
+    docker_plex:
+      command_on: "sudo docker start plex | sudo docker start plexpy | sudo docker start plex-requests"
+      command_off: "sudo docker stop plex | sudo docker stop plexpy | sudo docker stop plex-requests"
+      command_state: "docker ps | grep plex"
+      friendly_name: Plex
+    docker_transmission:
+      command_on: sudo docker start transmission
+      command_off: sudo docker stop transmission
+      command_state: "docker ps | grep transmission"
+      friendly_name: Transmission
+    docker_nextcloud:
+      command_on: sudo docker start nextcloud
+      command_off: sudo docker stop nextcloud
+      command_state: "docker ps | grep nextcloud"
+      friendly_name: Nextcloud
+    docker_mcmyadmin2:
+      command_on: sudo docker start mcmyadmin2
+      command_off: sudo docker stop mcmyadmin2
+      command_state: "docker ps | grep mcmyadmin2"
+      friendly_name: Minecraft
+
+- platform: broadlink
+  host: 10.0.0.114
+  mac: !secret broadlink_mac

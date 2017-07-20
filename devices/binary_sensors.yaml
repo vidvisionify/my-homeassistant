@@ -1,0 +1,57 @@
+##########################
+########## Misc ##########
+##########################
+- platform: ring
+  monitored_conditions:
+    - ding
+    - motion
+
+- platform: ping
+  host: 10.0.0.182
+  name: GaragePi
+
+- platform: mqtt
+  state_topic: "homealarm"
+  name: Alarm
+  payload_on: "1"
+  payload_off: "0"
+
+
+##########################
+###### PJ's Things #######
+##########################
+- platform: ping
+  host: 10.0.0.35
+  name: Pandorica
+
+- platform: ping
+  host: 10.0.0.93
+  name: Penn
+
+
+
+##########################
+########## Home ##########
+##########################
+- platform: ping
+  host: 10.0.0.222
+  name: Den TV
+
+##########################
+######## Gaming ##########
+##########################
+- platform: ping
+  host: 10.0.0.42
+  name: PS3
+
+- platform: ping
+  host: 10.0.0.161
+  name: Switch
+
+- platform: ping
+  host: 10.0.0.211
+  name: Wii U
+
+- platform: ping
+  host: 10.0.0.216
+  name: Xbox 360

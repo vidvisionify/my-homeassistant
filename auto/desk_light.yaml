@@ -1,0 +1,16 @@
+  - alias: "Light off with Pandorica"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.pandorica
+      state: 'off'
+    action:
+      - service: light.turn_off
+        entity_id: light.desk
+
+  - alias: "Light on with Pandorica"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.pandorica
+      state: 'on'
+    action:
+      - service: script.deskat2700k

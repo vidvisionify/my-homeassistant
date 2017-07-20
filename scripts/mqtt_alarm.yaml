@@ -1,0 +1,13 @@
+mqtt_alarm_disarm:
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: homealarm
+      payload: '0'
+
+mqtt_alarm_arm:
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: homealarm
+      payload: '1'

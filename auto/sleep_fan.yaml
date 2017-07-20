@@ -1,0 +1,13 @@
+  - alias: "Turn off fan in 2 hours"
+    initial_state: 'off'
+    trigger:
+      platform: state
+      entity_id: automation.turn_off_the_fan_two_hours_after_this_is_switched_on
+      state: 'on'
+      for:
+        hours: 2
+    action:
+      - service: homeassistant.turn_off
+        entity_id: switch.bedroom_fan
+      - service: homeassistant.turn_off
+        entity_id: automation.turn_off_the_fan_two_hours_after_this_is_switched_on

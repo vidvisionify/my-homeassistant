@@ -1,0 +1,15 @@
+- platform: rest
+  resource: http://api.whatpulse.org/user.php?format=json&user=vidvisionify
+  value_template: '{{ value_json.Keys }}'
+  name: Keys Pressed
+  unit_of_measurement: Keys
+- platform: rest
+  resource: http://api.whatpulse.org/user.php?format=json&user=vidvisionify
+  value_template: '{{ value_json.Clicks }}'
+  name: Clicks
+  unit_of_measurement: Clicks
+- platform: rest
+  resource: !secret find
+  value_template: '{{ value_json.users.pj[0].location }}'
+  method: GET
+  name: FIND location

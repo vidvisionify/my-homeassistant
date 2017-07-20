@@ -1,0 +1,133 @@
+homeassistant:
+  name: Home
+  latitude: !secret lat
+  longitude: !secret lon
+  elevation: !secret ele
+  unit_system: imperial
+  time_zone: !secret tz
+  customize: !include customize.yaml
+
+frontend:
+  themes:
+    red:
+      primary-color: "#f44336"
+    blue:
+      primary-color: "#03a9f4"
+http:
+  api_password: !secret api_pass
+updater:
+discovery:
+conversation:
+history:
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - group
+    entities:
+      - sensor.since_last_boot
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_summary
+logbook:
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - group
+    entities:
+      - sensor.since_last_boot
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_summary
+sun:
+
+######################
+##### Components #####
+######################
+zha:
+  usb_path: /dev/ttyUSB1
+  database_path: zigbee.db
+
+panel_iframe:
+  calendar:
+    title: 'Calendar'
+    icon: mdi:calendar
+    url: !secret calendar
+
+tts:
+  platform: google
+
+android_ip_webcam:
+  - host: 10.0.0.143
+    switches:
+      - torch
+      - night_vision
+
+ring:
+  username: !secret ring_user
+  password: !secret ring_pass
+
+ifttt:
+  key: !secret ifttt
+
+mqtt:
+  broker: !secret mqtt
+  port: 17544
+  client_id: home
+  keepalive: 60
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+
+notify:
+  - platform: joaoapps_join
+    device_id: !secret join_phone
+    name: pj_phone
+    api_key: !secret join
+
+emulated_hue:
+  host_ip: 10.0.0.82
+  listen_port: 8300
+  expose_by_default: false
+
+######################
+####### Devices ######
+######################
+device_tracker:
+  - platform: owntracks
+  - platform: icloud
+    username: !secret icloud_user
+    password: !secret icloud_pass
+    account_name: !secret icloud_name
+
+light: !include devices/lights.yaml
+media_player: !include devices/media_players.yaml
+script: !include_dir_merge_list scripts/
+camera: !include devices/cameras.yaml
+sensor: !include_dir_merge_list devices/sensors/
+binary_sensor: !include devices/binary_sensors.yaml
+switch: !include devices/switches.yaml
+group: !include groups.yaml
+automation: !include_dir_merge_list auto/
+
+######################
+######## Zones #######
+######################
+zone:
+  name: !secret z
+  latitude: !secret z_lat
+  longitude: !secret z_lon
+  icon: mdi:briefcase
+
+zone 2:
+  name: !secret z2
+  latitude: !secret z2_lat
+  longitude: !secret z2_lon
+  icon: mdi:account-search
+
+zone 3:
+  name: !secret z3
+  latitude: !secret z3_lat
+  longitude: !secret z3_lon
+  radius: 300
+  icon: mdi:book-open-page-variant

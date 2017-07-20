@@ -1,0 +1,3 @@
+- platform: comed_hourly_pricing
+  monitored_feeds:
+    - type: current_hour_average

@@ -1,0 +1,8 @@
+- platform: transmission
+  host: 10.0.0.82
+  username: !secret transmission_user
+  password: !secret transmission_pass
+  monitored_variables:
+    - current_status
+    - download_speed
+    - upload_speed

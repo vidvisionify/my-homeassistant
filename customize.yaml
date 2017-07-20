@@ -1,0 +1,108 @@
+######################
+####### HIDDEN #######
+######################
+    media_player.living_room_un60h7100:
+      hidden: true
+    sensor.speedtest_download:
+      hidden: true
+    sensor.ip_webcam_video_connections:
+      hidden: true
+    sensor.ip_webcam_audio_connections:
+      hidden: true
+    sensor.ip_webcam_video_connections_2:
+      hidden: true
+    sensor.ip_webcam_audio_connections_2:
+      hidden: true
+
+######################
+###### Weather #######
+######################
+    sensor.dark_sky_apparent_temperature:
+      friendly_name: Feels Like
+    sensor.dark_sky_daily_high_apparent_temperature:
+      friendly_name: High
+    sensor.dark_sky_daily_low_apparent_temperature:
+      friendly_name: Low
+    sensor.dark_sky_daily_summary:
+      friendly_name: Today
+    sensor.dark_sky_hourly_summary:
+      friendly_name: Later Today
+    sensor.dark_sky_humidity:
+      friendly_name: Humidity
+    sensor.dark_sky_minutely_summary:
+      friendly_name: Currently
+
+######################
+##### Open/Close #####
+######################
+    sensor.visonic_mct340_e_0b02b650_1:
+      friendly_name: Bedroom Temperature
+      hidden: true
+    sensor.visonic_mct340_e_0b02b43c_1:
+      friendly_name: Western Window Temperature
+      hidden: true
+    sensor.visonic_mct340_e_0b02bcb4_1:
+      friendly_name: Northern Window Temperature
+      hidden: true
+    sensor.visonic_mct340_e_0b02c60a_1:
+      friendly_name: Closet Temperature
+      hidden: true
+    binary_sensor.visonic_mct340_e_0b02b650_1:
+      friendly_name: Bedroom
+    binary_sensor.visonic_mct340_e_0b02b43c_1:
+      friendly_name: Western Window
+      icon: mdi:window-closed
+    binary_sensor.visonic_mct340_e_0b02bcb4_1:
+      friendly_name: Northern Window
+      icon: mdi:window-closed
+    binary_sensor.visonic_mct340_e_0b02c60a_1:
+      friendly_name: Closet
+
+######################
+####### Lights #######
+######################
+    light.sengled_z01cia19nae26_0303d1dd_1:
+      friendly_name: Nightstand
+      icon: mdi:lamp
+      emulated_hue: true
+      custom_ui_state_card: custom-ui
+      state_card_mode: single-line
+      hide_control: false
+      slider_theme:
+        min: 0
+        max: 255
+        pin: true
+        off_when_min: true
+        report_when_not_changed: false
+
+    light.sengled_e11g13_0306449a_1:
+      friendly_name: Desk
+      icon: mdi:spotlight-beam
+      emulated_hue: true
+      emulated_hue_name: "computer lamp"
+      custom_ui_state_card: custom-ui
+      state_card_mode: single-line
+      hide_control: false
+      slider_theme:
+        min: 0
+        max: 255
+        pin: true
+        off_when_min: true
+        report_when_not_changed: false
+
+    light.sengled_e11g13_0306574f_1:
+      friendly_name: Closet
+      emulated_hue: true
+
+    light.desk:
+      friendly_name: Desk
+      icon: mdi:lamp
+      custom_ui_state_card: custom-ui
+      state_card_mode: single-line
+      hide_control: false
+      slider_theme:
+        min: 0
+        max: 255
+        pin: true
+        off_when_min: true
+        report_when_not_changed: false
