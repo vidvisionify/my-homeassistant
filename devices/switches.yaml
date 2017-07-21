@@ -30,6 +30,9 @@
       command_state: "docker ps | grep mcmyadmin2"
       friendly_name: Minecraft
 
-- platform: broadlink
-  host: 10.0.0.114
-  mac: !secret broadlink_mac
+- platform: tplink
+  host: 10.0.0.120
+
+#- platform: broadlink
+#  host: 10.0.0.114
+#  mac: !secret broadlink_mac

@@ -3,6 +3,7 @@ home:
   view: false
   entities:
   - binary_sensor.alarm
+  - cover.garage
   - binary_sensor.ring_front_door_ding
   - binary_sensor.ring_front_door_motion
   - binary_sensor.den_tv
@@ -26,6 +27,7 @@ weather:
   - sensor.dark_sky_humidity
   - sensor.dark_sky_daily_high_apparent_temperature
   - sensor.dark_sky_daily_low_apparent_temperature
+  - sun.sun
   - sensor.dark_sky_hourly_summary
   - sensor.dark_sky_daily_summary
   - camera.weather_radar
@@ -82,6 +84,7 @@ docker:
   entities:
   - switch.docker_portainer
   - switch.docker_plex
+  - sensor.plex
   - switch.docker_nextcloud
   - switch.docker_mcmyadmin2
   - switch.docker_transmission
@@ -96,7 +99,6 @@ venus:
   - sensor.disk_free_homephil
   - sensor.ram_free
   - sensor.since_last_boot
-  - sensor.plex
 
 internetspeeds:
   name: Internet Speed

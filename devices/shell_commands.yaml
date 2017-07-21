@@ -1,0 +1,4 @@
+  sleep_pc: 'curl -k http://10.0.0.35:8585/?action=System.Sleep'
+  remote_tv_power: !secret remote_tv_power
+  remote_tv_1: !secret remote_tv_1
+  remote_tv_chminus: !secret remote_tv_chminus

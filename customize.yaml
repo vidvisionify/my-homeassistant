@@ -191,6 +191,9 @@
     switch.docker_transmission:
       icon: mdi:download-network
 
+    sensor.plex:
+      icon: mdi:plex
+
     sensor.transmission_status:
       friendly_name: Transmission
       icon: mdi:download-network
