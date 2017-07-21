@@ -27,7 +27,7 @@
     binary_sensor.den_tv:
       icon: mdi:television
     sensor.comed_current_hour_average_price:
-      friendly_name: Comed Hour Price
+      friendly_name: ComEd Hour Price
       icon: mdi:power-plug
     sensor.usps_mail:
       friendly_name: Today's Mail
@@ -106,6 +106,9 @@
     binary_sensor.visonic_mct340_e_0b02c60a_1:
       friendly_name: Closet
 
+    switch.bedroom_fan:
+      icon: mdi:fan
+
     automation.bedroom__closet_off_in_2_minutes:
       icon: mdi:timer
     automation.turn_off_fan_in_2_hours:
@@ -159,6 +162,16 @@
     binary_sensor.moto_x:
       icon: mdi:cellphone
 
+    script.tv_power:
+      friendly_name: TV Power
+      icon: mdi:power
+    script.pandorica_sleep:
+      friendly_name: Sleep PC
+      icon: mdi:power
+
+    script.corner_light:
+      friendly_name: Corner Light
+      icon: mdi:lightbulb-outline
 
     binary_sensor.pandorica:
       icon: mdi:desktop-tower

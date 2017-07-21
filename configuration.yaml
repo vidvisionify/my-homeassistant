@@ -110,7 +110,7 @@ cover:
 
 light: !include devices/lights.yaml
 media_player: !include devices/media_players.yaml
-script: !include_dir_merge_list scripts/
+script: !include_dir_merge_named scripts/
 camera: !include devices/cameras.yaml
 sensor: !include_dir_merge_list devices/sensors/
 binary_sensor: !include devices/binary_sensors.yaml
@@ -118,6 +118,7 @@ switch: !include devices/switches.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list auto/
 shell_command: !include devices/shell_commands.yaml
+input_select: !include devices/input_select.yaml
 
 ######################
 ######## Zones #######

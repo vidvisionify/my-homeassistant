@@ -1,0 +1,9 @@
+  tv_input:
+    name: TV Input Select 
+    options:
+      - "****"
+      - "1.Switcher"
+      - "2.Fire TV"
+      - "3.Cable"
+    initial: "****"
+    icon: mdi:library-plus

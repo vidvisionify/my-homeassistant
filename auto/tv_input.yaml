@@ -1,0 +1,38 @@
+  - alias: auto_tv_input_hdmi
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.tv_input
+      to: "1.Switcher"
+    action:
+      - service: script.tv_input_hdmi
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.tv_input
+          option: "****"
+
+  - alias: auto_tv_input_firetv
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.tv_input
+      to: "2.Fire TV"
+    action:
+      - service: script.tv_input_firetv
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.tv_input
+          option: "****"
+
+  - alias: auto_tv_input_cable
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_select.tv_input
+      to: "3.Cable"
+    action:
+      - service: script.tv_input_cable
+      - service: input_select.select_option
+        data:
+          entity_id: input_select.tv_input
+          option: "****"

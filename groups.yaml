@@ -34,9 +34,10 @@ weather:
 
 basement:
   name: Basement
+  control: hidden
   entities:
   - light.desk_light
-  - light.sengled_z01cia19nae26_0303d1dd_1
+  - script.corner_light
   - switch.candles
   - switch.ip_webcam_torch
   - switch.ip_webcam_night_vision
@@ -46,13 +47,22 @@ pandorica:
   name: Pandorica
   entities:
   - binary_sensor.pandorica
+  - script.pandorica_sleep
   - sensor.clicks
   - sensor.keys_pressed
   - sensor.rendering_mode
   - media_player.plex_web_chrome
 
+entertainment:
+  name: Entertainment Center
+  control: hidden
+  entities:
+  - script.tv_power
+  - input_select.tv_input
+
 pj_bedroom:
   name: Bedroom
+  control: hidden
   entities:
   - light.nightstand
   - light.sengled_e11g13_0306449a_1
@@ -150,6 +160,7 @@ basement_view:
   - binary_sensor.moto_x
   - group.pandorica
   - group.basement
+  - group.entertainment
   - media_player.aftt
   - media_player.spotify
 
@@ -165,3 +176,4 @@ server_view:
   - binary_sensor.garagepi
   - sensor.steam_76561198083742776
   - automation.notify__if_garagepi_is_down
+  - camera.data_use

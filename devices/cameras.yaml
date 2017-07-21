@@ -1,3 +1,6 @@
-  platform: generic
-  still_image_url: !secret radar  
-  name: Weather Radar
+  - platform: generic
+    still_image_url: !secret radar  
+    name: Weather Radar
+  - platform: local_file
+    file_path: /root/datause/.png
+    name: Data use

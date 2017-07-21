@@ -1,0 +1,3 @@
+corner_light:
+  sequence:
+  - service: shell_command.corner_light

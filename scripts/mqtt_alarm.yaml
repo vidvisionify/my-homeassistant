@@ -4,6 +4,9 @@ mqtt_alarm_disarm:
     data:
       topic: homealarm
       payload: '0'
+  - service: frontend.set_theme
+    data:
+      name: blue
 
 mqtt_alarm_arm:
   sequence:
@@ -11,3 +14,6 @@ mqtt_alarm_arm:
     data:
       topic: homealarm
       payload: '1'
+  - service: frontend.set_theme
+    data:
+      name: red

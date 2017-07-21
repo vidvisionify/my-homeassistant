@@ -2,10 +2,26 @@ tv_power:
   sequence:
   - service: shell_command.remote_tv_power
 
+tv_input_cable:
+  sequence:
+  - service: shell_command.remote_tv_1
+  - delay: 00:00:03
+  - service: shell_command.remote_tv_chminus
+
 tv_input_firetv:
   sequence:
   - service: shell_command.remote_tv_1
   - delay: 00:00:03
+  - service: shell_command.remote_tv_chminus
+  - delay: 00:00:01
+  - service: shell_command.remote_tv_chminus
+
+tv_input_hdmi:
+  sequence:
+  - service: shell_command.remote_tv_1
+  - delay: 00:00:03
+  - service: shell_command.remote_tv_chminus
+  - delay: 00:00:01
   - service: shell_command.remote_tv_chminus
   - delay: 00:00:01
   - service: shell_command.remote_tv_chminus
