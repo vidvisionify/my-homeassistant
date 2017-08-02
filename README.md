@@ -21,7 +21,7 @@ I have no idea what I'm doing. Sorry if this is poorly documented.
 # Software
 The configuration also makes use of these programs or custom components:
 - [HA Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
-- [MinecraftServer-HA] (https://github.com/GreenTurtwig/MinecraftServer-HA)
+- [MinecraftServer-HA](https://github.com/GreenTurtwig/MinecraftServer-HA)
 
 # Screenshots
 Updated July 21st. Red theme activates when alarm is on.
