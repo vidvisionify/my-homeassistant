@@ -67,19 +67,34 @@
     binary_sensor.steam_link:
       icon: mdi:steam
     light.sengled_e11g13_0306449a_1:
-      friendly_name: Desk
+      friendly_name: Spotlight
       icon: mdi:spotlight-beam
       emulated_hue: true
-      emulated_hue_name: "computer lamp"
-      custom_ui_state_card: custom-ui
-      state_card_mode: single-line
-      hide_control: false
-      slider_theme:
-        min: 0
-        max: 255
-        pin: true
-        off_when_min: true
-        report_when_not_changed: false
+      emulated_hue_name: "spotlight"
+#      custom_ui_state_card: custom-ui
+#      state_card_mode: single-line
+#      hide_control: false
+#      slider_theme:
+#        min: 0
+#        max: 255
+#        pin: true
+#        off_when_min: true
+#        report_when_not_changed: false
+
+    light.sengled_z01cia19nae26_0303d1dd_1:
+      friendly_name: Nightstand
+      icon: mdi:lamp
+      emulated_hue: true
+#      custom_ui_state_card: custom-ui
+#      state_card_mode: single-line
+#      hide_control: false
+#      slider_theme:
+#        min: 0
+#        max: 255
+#        pin: true
+#        off_when_min: true
+#        report_when_not_changed: false
+
     light.sengled_e11g13_0306574f_1:
       friendly_name: Closet
       emulated_hue: true
@@ -117,32 +132,18 @@
 ######################
 ###### Basement ######
 ######################
-    light.sengled_z01cia19nae26_0303d1dd_1:
-      friendly_name: Nightstand
-      icon: mdi:lamp
-      emulated_hue: true
-      custom_ui_state_card: custom-ui
-      state_card_mode: single-line
-      hide_control: false
-      slider_theme:
-        min: 0
-        max: 255
-        pin: true
-        off_when_min: true
-        report_when_not_changed: false
-
     light.desk:
       friendly_name: Desk
       icon: mdi:lamp
-      custom_ui_state_card: custom-ui
-      state_card_mode: single-line
-      hide_control: false
-      slider_theme:
-        min: 0
-        max: 255
-        pin: true
-        off_when_min: true
-        report_when_not_changed: false
+#      custom_ui_state_card: custom-ui
+#      state_card_mode: single-line
+#      hide_control: false
+#      slider_theme:
+#        min: 0
+#        max: 255
+#        pin: true
+#        off_when_min: true
+#        report_when_not_changed: false
 
     switch.candles:
       icon: mdi:candle
@@ -168,10 +169,6 @@
     script.pandorica_sleep:
       friendly_name: Sleep PC
       icon: mdi:power
-
-    script.corner_light:
-      friendly_name: Corner Light
-      icon: mdi:lightbulb-outline
 
     binary_sensor.pandorica:
       icon: mdi:desktop-tower

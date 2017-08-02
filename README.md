@@ -11,7 +11,7 @@ I have no idea what I'm doing. Sorry if this is poorly documented.
 * Broadlink RM3
 * Yeelight RGB Bulb
 * TP-Link Smart Switch
-* TP-Link Smart Bulb (No HA Support, janky  Tasker implementation)
+* TP-Link Smart Bulb
 * Linear HUSBZB-1 (Zigbee Home Automation/Zigbee)
   * Sengled Element Classic Bulb x2
   * Sengled Element Touch Bulb

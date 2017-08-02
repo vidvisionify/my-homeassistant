@@ -1,0 +1,9 @@
+- alias: Notify - Start
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+      - service: notify.discord
+        data:
+          message: ":recycle: Restarted successfully."
+          target: 339272352611172355

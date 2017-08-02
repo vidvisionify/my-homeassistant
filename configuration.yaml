@@ -18,6 +18,7 @@ http:
 updater:
 discovery:
 conversation:
+shopping_list:
 history:
   exclude:
     domains:
@@ -84,6 +85,9 @@ notify:
     device_id: !secret join_phone
     name: pj_phone
     api_key: !secret join
+  - name: discord
+    platform: discord
+    token: !secret discord
 
 emulated_hue:
   host_ip: 10.0.0.82
@@ -107,7 +111,11 @@ cover:
         command_open: !secret garage
         command_close: !secret garage
         friendly_name: Garage
-
+      tv_volume:
+        command_open: !secret remote_audio_volup
+        command_stop: !secret remote_audio_mute
+        command_close: !secret remote_audio_voldown
+        friendly_name: TV Volume
 light: !include devices/lights.yaml
 media_player: !include devices/media_players.yaml
 script: !include_dir_merge_named scripts/

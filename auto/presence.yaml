@@ -1,0 +1,50 @@
+- alias: PJ has left
+  trigger:
+    platform: state
+    entity_id: device_tracker.phone_s7
+    to: "not_home"
+  action:
+      - service: notify.discord
+        data:
+          message: ":door: **PJ** has left. Turning off **Basement** and **Bedroom**."
+          target: 339272352611172355
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.basement
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.pj_bedroom
+
+- alias: PJ is home
+  trigger:
+    platform: state
+    entity_id: device_tracker.phone_s7
+    to: "home"
+  action:
+      - service: notify.discord
+        data:
+          message: ":house: **PJ** is home."
+          target: 339272352611172355
+
+
+- alias: Notify - Phil is home
+  trigger:
+    platform: state
+    entity_id: device_tracker.iphone
+    to: "home"
+  action:
+      - service: notify.discord
+        data:
+          message: ":house: **Phil** is now home."
+          target: 339272352611172355
+
+- alias: Notify - Phil is away
+  trigger:
+    platform: state
+    entity_id: device_tracker.iphone
+    to: "not_home"
+  action:
+      - service: notify.discord
+        data:
+          message: ":door: **Phil** has left."
+          target: 339272352611172355

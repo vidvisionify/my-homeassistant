@@ -2,7 +2,7 @@
     trigger:
       platform: state
       entity_id: binary_sensor.visonic_mct340_e_0b02c60a_1
-      state: 'off'
+      to: 'off'
     action:
       - service: light.turn_off
         entity_id: light.sengled_e11g13_0306574f_1
@@ -11,7 +11,7 @@
     trigger:
       platform: state
       entity_id: binary_sensor.visonic_mct340_e_0b02c60a_1
-      state: 'on'
+      to: 'on'
     action:
       - service: light.turn_on
         entity_id: light.sengled_e11g13_0306574f_1
@@ -20,7 +20,7 @@
     trigger:
       platform: state
       entity_id: light.sengled_e11g13_0306574f_1
-      state: 'on'
+      to: 'on'
       for:
         minutes: 2
     action:

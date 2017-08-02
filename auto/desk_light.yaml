@@ -2,7 +2,7 @@
     trigger:
       platform: state
       entity_id: binary_sensor.pandorica
-      state: 'off'
+      to: 'off'
     action:
       - service: light.turn_off
         entity_id: light.desk
@@ -11,6 +11,6 @@
     trigger:
       platform: state
       entity_id: binary_sensor.pandorica
-      state: 'on'
+      to: 'on'
     action:
       - service: script.deskat2700k
