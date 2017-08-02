@@ -23,11 +23,9 @@ weather:
   name: Weather
   entities:
   - sensor.dark_sky_minutely_summary
-  - sensor.dark_sky_apparent_temperature
   - sensor.dark_sky_humidity
   - sensor.dark_sky_daily_high_apparent_temperature
   - sensor.dark_sky_daily_low_apparent_temperature
-  - sun.sun
   - sensor.dark_sky_hourly_summary
   - sensor.dark_sky_daily_summary
   - camera.weather_radar
@@ -90,7 +88,6 @@ pj_status:
 pj_phone:
   name: Galaxy S7
   entities:
-  - sensor.pj_phone_battery
   - sensor.pj_phone_power
   - sensor.pj_phone_wifi
   - sensor.pj_phone_alarm
@@ -100,10 +97,13 @@ docker:
   entities:
   - switch.docker_portainer
   - switch.docker_plex
-  - sensor.plex
   - switch.docker_nextcloud
   - switch.docker_mcmyadmin2
   - switch.docker_transmission
+  - group.transmission_badges
+
+transmission_badges:
+  entities:
   - sensor.transmission_status
   - sensor.transmission_down_speed
   - sensor.transmission_up_speed

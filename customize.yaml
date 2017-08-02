@@ -1,3 +1,6 @@
+    "*.*":
+      custom_ui_state_card: custom-ui
+
 ######################
 ####### HIDDEN #######
 ######################
@@ -14,16 +17,24 @@
     sensor.ip_webcam_audio_connections_2:
       hidden: true
 
+
 ######################
 ##### Home View ######
 ######################
     binary_sensor.alarm:
       icon: mdi:security-home
     binary_sensor.ring_front_door_ding:
+      custom_ui_state_card: custom-ui
+      show_last_changed: true
       friendly_name: Doorbell Ring
       icon: mdi:bell-ring
     binary_sensor.ring_front_door_motion:
+      custom_ui_state_card: custom-ui
+      show_last_changed: true
       friendly_name: Doorbell Motion
+    cover.garage:
+      custom_ui_state_card: custom-ui
+      confirm_controls_show_lock: true
     binary_sensor.den_tv:
       icon: mdi:television
     sensor.comed_current_hour_average_price:
@@ -32,9 +43,12 @@
     sensor.usps_mail:
       friendly_name: Today's Mail
       icon: mdi:mailbox
+      extra_badge:
+        entity_id: sensor.usps_packages 
     sensor.usps_packages:
       friendly_name: USPS Packages
       icon: mdi:package
+      hidden: true
     sensor.ups:
       friendly_name: UPS Packages
       icon: mdi:package
@@ -58,6 +72,10 @@
       friendly_name: Humidity
     sensor.dark_sky_minutely_summary:
       friendly_name: Currently
+      extra_badge:
+        entity_id: sensor.dark_sky_apparent_temperature
+    sun.sun:
+      hidden: true
 
 ######################
 ####### Bedroom ######
@@ -129,6 +147,10 @@
     automation.turn_off_fan_in_2_hours:
       icon: mdi:fan
 
+    sensor.pj_phone_power:
+      extra_badge:
+        entity_id: sensor.pj_phone_battery
+
 ######################
 ###### Basement ######
 ######################
@@ -198,11 +220,10 @@
       icon: mdi:cloud
     switch.docker_plex:
       icon: mdi:plex
+      extra_badge:
+        entity_id: sensor.plex
     switch.docker_transmission:
       icon: mdi:download-network
-
-    sensor.plex:
-      icon: mdi:plex
 
     sensor.transmission_status:
       friendly_name: Transmission
@@ -213,6 +234,9 @@
     sensor.transmission_up_speed:
       friendly_name: Upload
       icon: mdi:arrow-up-bold
+
+    group.transmission_badges:
+      state_card_mode: badges
 
     sensor.speedtest_ping:
       friendly_name: Ping

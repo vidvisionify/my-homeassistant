@@ -5,7 +5,7 @@ homeassistant:
   elevation: !secret ele
   unit_system: imperial
   time_zone: !secret tz
-  customize: !include customize.yaml
+  customize_glob: !include customize.yaml
 
 frontend:
   themes:
@@ -13,6 +13,14 @@ frontend:
       primary-color: "#f44336"
     blue:
       primary-color: "#03a9f4"
+
+customizer:
+  panel: true
+  hide_customui_attributes: false
+  hide_attributes:
+    - node_id
+    - value_index
+
 http:
   api_password: !secret api_pass
 updater:
