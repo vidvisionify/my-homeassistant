@@ -35,8 +35,12 @@
     cover.garage:
       custom_ui_state_card: custom-ui
       confirm_controls_show_lock: true
+      extra_badge:
+        entity_id: binary_sensor.garagepi
     binary_sensor.den_tv:
       icon: mdi:television
+      extra_badge:
+        entity_id: sensor.den_tv_time
     sensor.comed_current_hour_average_price:
       friendly_name: ComEd Hour Price
       icon: mdi:power-plug
@@ -55,8 +59,6 @@
     sensor.fedex:
       friendly_name: Fedex Packages
       icon: mdi:package
-    binary_sensor.mom_iphone:
-      icon: mdi:apple
 
     sensor.dark_sky_apparent_temperature:
       friendly_name: Feels Like
@@ -89,33 +91,19 @@
       icon: mdi:spotlight-beam
       emulated_hue: true
       emulated_hue_name: "spotlight"
-#      custom_ui_state_card: custom-ui
-#      state_card_mode: single-line
-#      hide_control: false
-#      slider_theme:
-#        min: 0
-#        max: 255
-#        pin: true
-#        off_when_min: true
-#        report_when_not_changed: false
+
 
     light.sengled_z01cia19nae26_0303d1dd_1:
       friendly_name: Nightstand
       icon: mdi:lamp
       emulated_hue: true
-#      custom_ui_state_card: custom-ui
-#      state_card_mode: single-line
-#      hide_control: false
-#      slider_theme:
-#        min: 0
-#        max: 255
-#        pin: true
-#        off_when_min: true
-#        report_when_not_changed: false
 
     light.sengled_e11g13_0306574f_1:
       friendly_name: Closet
       emulated_hue: true
+      extra_badge:
+        entity_id: binary_sensor.visonic_mct340_e_0b02c60a_1
+
     sensor.visonic_mct340_e_0b02b650_1:
       friendly_name: Bedroom Temperature
       hidden: true
@@ -142,6 +130,9 @@
     switch.bedroom_fan:
       icon: mdi:fan
 
+    group.pj_bedroom_badges:
+      state_card_mode: badges
+
     automation.bedroom__closet_off_in_2_minutes:
       icon: mdi:timer
     automation.turn_off_fan_in_2_hours:
@@ -157,15 +148,6 @@
     light.desk:
       friendly_name: Desk
       icon: mdi:lamp
-#      custom_ui_state_card: custom-ui
-#      state_card_mode: single-line
-#      hide_control: false
-#      slider_theme:
-#        min: 0
-#        max: 255
-#        pin: true
-#        off_when_min: true
-#        report_when_not_changed: false
 
     switch.candles:
       icon: mdi:candle
@@ -185,6 +167,11 @@
     binary_sensor.moto_x:
       icon: mdi:cellphone
 
+    sensor.steam_76561198039826665:
+     extra_data_template: "{Game}"
+     extra_badge:
+       entity_id: sensor.vidvisionifylps
+
     script.tv_power:
       friendly_name: TV Power
       icon: mdi:power
@@ -192,8 +179,14 @@
       friendly_name: Sleep PC
       icon: mdi:power
 
+    cover.volume:
+      icon: mdi:volume-plus
+
     binary_sensor.pandorica:
       icon: mdi:desktop-tower
+      extra_badge:
+        entity_id: sensor.pandorica_time
+
     sensor.clicks:
       icon: mdi:mouse
     sensor.keys_pressed:
@@ -210,20 +203,27 @@
       icon: mdi:printer
     sensor.steam_76561198083742776:
       icon: mdi:steam
-      friendly_name: Phil's Steam
-
+      friendly_name: thecooperfam
+      extra_data_template: "{Game}"
     switch.docker_mcmyadmin2:
       icon: mdi:minecraft
+      extra_badge:
+        entity_id: sensor.local_server
     switch.docker_portainer:
       icon: mdi:inbox-arrow-up
     switch.docker_nextcloud:
       icon: mdi:cloud
+    switch.docker_firetvserver:
+      icon: mdi:amazon
+
     switch.docker_plex:
       icon: mdi:plex
       extra_badge:
         entity_id: sensor.plex
     switch.docker_transmission:
       icon: mdi:download-network
+      extra_badge:
+        entity_id: sensor.transmission_status
 
     sensor.transmission_status:
       friendly_name: Transmission

@@ -1,0 +1,15 @@
+- platform: history_stats
+  name: Den TV Time
+  entity_id: binary_sensor.den_tv
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  end: '{{ now() }}'
+
+- platform: history_stats
+  name: Pandorica Time
+  entity_id: binary_sensor.pandorica
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+  end: '{{ now() }}'

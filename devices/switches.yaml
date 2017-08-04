@@ -25,10 +25,16 @@
       command_state: "docker ps | grep nextcloud"
       friendly_name: Nextcloud
     docker_mcmyadmin2:
-      command_on: sudo docker start mcmyadmin2
-      command_off: sudo docker stop mcmyadmin2
-      command_state: "docker ps | grep mcmyadmin2"
+      command_on: sudo docker start mcmyadmin
+      command_off: sudo docker stop mcmyadmin
+      command_state: "docker ps | grep mcmyadmin"
       friendly_name: Minecraft
+    docker_firetvserver:
+      command_on: sudo docker start FireTVServer
+      command_off: sudo docker stop FireTVServer
+      command_state: "docker ps | grep FireTVServer"
+      friendly_name: Fire TV Server
+
 
 - platform: tplink
   host: 10.0.0.120

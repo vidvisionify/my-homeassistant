@@ -1,3 +1,6 @@
 - platform: minecraft
-  name: Bun Server
+  name: Feed The Beats
   server: home.redd.us
+- platform: minecraft
+  name: Local Server
+  server: 10.0.0.82

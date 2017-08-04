@@ -1,0 +1,10 @@
+pc_sleep:
+  sequence:
+  - condition: state
+    entity_id: sensor.rendering_mode
+    state: 'off'
+  - service: shell_command.sleep_pc
+  - service: notify.discord
+    data:
+      message: "**Pandorica** has been put to sleep."
+      target: 339272352611172355

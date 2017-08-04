@@ -78,7 +78,3 @@
 - platform: ping
   host: 10.0.0.231
   name: Steam Link
-
-- platform: ping
-  host: 10.0.0.166
-  name: Mom iPhone

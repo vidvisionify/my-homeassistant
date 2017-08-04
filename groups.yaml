@@ -36,6 +36,12 @@ basement:
   - light.desk_light
   - light.corner_light
   - switch.candles
+
+webcam:
+  name: Webcam
+  control: hidden
+  entities:
+  - binary_sensor.moto_x
   - switch.ip_webcam_torch
   - switch.ip_webcam_night_vision
   - camera.ip_webcam
@@ -44,10 +50,10 @@ pandorica:
   name: Pandorica
   entities:
   - binary_sensor.pandorica
-  - script.pandorica_sleep
+  - script.pc_sleep
   - sensor.clicks
   - sensor.keys_pressed
-  - sensor.rendering_mode
+  - sensor.steam_76561198039826665
   - media_player.plex_web_chrome
 
 entertainment:
@@ -55,19 +61,26 @@ entertainment:
   control: hidden
   entities:
   - script.tv_power
+  - cover.volume
   - input_select.tv_input
-  - cover.tv_volume
   - media_player.amazon_fire_tv
 
 pj_bedroom:
   name: Bedroom
+  control: hidden
   entities:
   - light.sengled_z01cia19nae26_0303d1dd_1
   - light.sengled_e11g13_0306449a_1
   - switch.bedroom_fan
   - light.sengled_e11g13_0306574f_1
+  - group.pj_bedroom_badges
   - media_player.pjs_chromecast
   - media_player.phils_room
+
+pj_bedroom_badges:
+  entities:
+  - binary_sensor.penn
+  - binary_sensor.steam_link
 
 pj_bedroom_auto:
   name: Automation
@@ -76,35 +89,28 @@ pj_bedroom_auto:
   - automation.turn_off_fan_in_2_hours
   - automation.bedroom__closet_off_in_2_minutes
 
-pj_status:
-  name: Status
-  entities:
-  - sensor.steam_76561198039826665
-  - sensor.find_location
-  - sensor.vidvisionifylps
-  - sensor.bun_server
-  - media_player.galaxy_s7
-
 pj_phone:
   name: Galaxy S7
   entities:
   - sensor.pj_phone_power
   - sensor.pj_phone_wifi
   - sensor.pj_phone_alarm
+  - sensor.find_location
+  - media_player.galaxy_s7
 
 docker:
   name: Docker
   entities:
   - switch.docker_portainer
-  - switch.docker_plex
+  - switch.docker_firetvserver
   - switch.docker_nextcloud
   - switch.docker_mcmyadmin2
+  - switch.docker_plex
   - switch.docker_transmission
   - group.transmission_badges
 
 transmission_badges:
   entities:
-  - sensor.transmission_status
   - sensor.transmission_down_speed
   - sensor.transmission_up_speed
 
@@ -116,13 +122,12 @@ venus:
   - sensor.ram_free
   - sensor.since_last_boot
 
-internetspeeds:
-  name: Internet Speed
+
+office:
+  name: Office
   entities:
-  - sensor.speedtest_ping
-  - sensor.fastcom_download
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
+  - sensor.steam_76561198083742776
+  - binary_sensor.xerox
 
 ######################
 ######## Views #######
@@ -139,7 +144,6 @@ home_view:
   - group.home
   - group.mail
   - group.weather
-  - group.office
 
 bedroom_view:
   name: Bedroom
@@ -147,11 +151,8 @@ bedroom_view:
   view: yes
   entities:
   - binary_sensor.visonic_mct340_e_0b02b650_1
-  - binary_sensor.visonic_mct340_e_0b02c60a_1
   - binary_sensor.visonic_mct340_e_0b02bcb4_1
   - binary_sensor.visonic_mct340_e_0b02b43c_1
-  - binary_sensor.penn
-  - binary_sensor.steam_link
   - group.pj_bedroom
   - group.pj_phone
   - group.pj_status
@@ -162,16 +163,15 @@ basement_view:
   icon: mdi:television
   view: yes
   entities:
+  - sensor.feed_the_beats
   - binary_sensor.ps3
   - binary_sensor.switch
   - binary_sensor.wii_u
   - binary_sensor.xbox_360
-  - binary_sensor.echo
-  - binary_sensor.fire_stick
-  - binary_sensor.moto_x
   - group.pandorica
   - group.basement
   - group.entertainment
+  - group.webcam
   - media_player.aftt
   - media_player.spotify
 
@@ -183,8 +183,8 @@ server_view:
   - group.venus
   - group.docker
   - group.internetspeeds
-  - sensor.steam_76561198083742776
-  - binary_sensor.xerox
-  - binary_sensor.garagepi
-  - automation.notify__if_garagepi_is_down
-  - camera.data_use
+  - sensor.speedtest_ping
+  - sensor.fastcom_download
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - group.office

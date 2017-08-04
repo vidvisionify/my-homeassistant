@@ -1,3 +1,0 @@
-pandorica_sleep:
-  sequence:
-  - service: shell_command.sleep_pc

@@ -2,3 +2,6 @@
   remote_tv_power: !secret remote_tv_power
   remote_tv_1: !secret remote_tv_1
   remote_tv_chminus: !secret remote_tv_chminus
+  remote_audio_volup: !secret remote_audio_volup
+  remote_audio_mute: !secret remote_audio_mute
+  remote_audio_voldown: !secret remote_audio_voldown

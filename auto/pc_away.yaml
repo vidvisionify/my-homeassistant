@@ -1,0 +1,12 @@
+- alias: PC is Away
+  trigger:
+    platform: state
+    entity_id: sensor.steam_76561198039826665
+    to: 'away'
+    for:
+      hours: 1
+  action:
+      - service: notify.discord
+        data:
+          message: "**@PJ**, **Pandorica** has been away for an hour. You should probably put it to sleep."
+          target: 339272352611172355
