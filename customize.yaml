@@ -152,6 +152,12 @@
     switch.candles:
       icon: mdi:candle
 
+    light.workspace:
+      icon: mdi:led-off
+      emulated_hue: true
+      emulated_hue_name: "workspace"
+
+
     binary_sensor.ps3:
       icon: mdi:playstation
     binary_sensor.xbox_360:
@@ -175,7 +181,7 @@
     script.tv_power:
       friendly_name: TV Power
       icon: mdi:power
-    script.pandorica_sleep:
+    script.pc_sleep:
       friendly_name: Sleep PC
       icon: mdi:power
 

@@ -12,7 +12,7 @@ I have no idea what I'm doing. Sorry if this is poorly documented.
 * Yeelight RGB Bulb
 * TP-Link Smart Bulb
 * TP-Link Smart Switch
-* Sonoff Switch Cord (Stock Firmware for now)
+* Sonoff Switch Cord (Flashed with Sonoff-Tasmota)
 * Linear HUSBZB-1 (Zigbee Home Automation/Zigbee)
   * Sengled Element Classic Bulb x2
   * Sengled Element Touch Bulb
@@ -23,6 +23,7 @@ The configuration also makes use of these programs or custom components:
 - [HA - Custom UI](https://github.com/andrey-git/home-assistant-custom-ui)
 - [HA - History Stats](https://github.com/bokub/ha-history-stats)
 - [HA - Minecraft Server](https://github.com/GreenTurtwig/MinecraftServer-HA)
+- [Sonoff - Tasmota](https://github.com/arendst/Sonoff-Tasmota)
 
 # Screenshots
 Updated July 21st. Red theme activates when alarm is on.

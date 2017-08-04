@@ -7,3 +7,12 @@
         save_on_change: False
   - platform: tplink
     host: 10.0.0.30
+
+  - platform: mqtt
+    name: "Workspace"
+    state_topic: "stat/sonoff1/POWER"
+    command_topic: "cmnd/sonoff1/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true

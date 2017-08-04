@@ -35,7 +35,6 @@
       command_state: "docker ps | grep FireTVServer"
       friendly_name: Fire TV Server
 
-
 - platform: tplink
   host: 10.0.0.120
 
