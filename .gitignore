@@ -28,4 +28,5 @@ html5_push_registrations.conf
 ip_bans.yaml
 /icloud/*
 /custom_components
+/conf
 zigbee.db

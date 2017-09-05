@@ -4,6 +4,7 @@ home:
   entities:
   - binary_sensor.alarm
   - cover.garage
+  - light.garage
   - binary_sensor.ring_front_door_ding
   - binary_sensor.ring_front_door_motion
   - binary_sensor.den_tv
@@ -18,6 +19,7 @@ mail:
   - sensor.usps_packages
   - sensor.ups
   - sensor.fedex
+  - camera.usps_mail
 
 weather:
   name: Weather
@@ -34,9 +36,11 @@ basement:
   name: Basement
   entities:
   - light.desk_light
-  - light.workspace
   - light.corner_light
+  - light.salt_lamp
+  - switch.switch
   - switch.candles
+  - switch.dehumidifier
 
 webcam:
   name: Webcam
@@ -68,7 +72,6 @@ entertainment:
 
 pj_bedroom:
   name: Bedroom
-  control: hidden
   entities:
   - light.sengled_z01cia19nae26_0303d1dd_1
   - light.sengled_e11g13_0306449a_1
@@ -83,6 +86,14 @@ pj_bedroom_badges:
   - binary_sensor.penn
   - binary_sensor.steam_link
 
+pj_bedroom_scenes:
+  name: Scenes
+  control: hidden
+  entities:
+  - scene.high_bedroom
+  - scene.low_bedroom
+  - scene.bedtime
+
 pj_bedroom_auto:
   name: Automation
   control: hidden
@@ -91,13 +102,20 @@ pj_bedroom_auto:
   - automation.bedroom__closet_off_in_2_minutes
 
 pj_phone:
-  name: Galaxy S7
+  name: Phone
   entities:
-  - sensor.pj_phone_power
-  - sensor.pj_phone_wifi
-  - sensor.pj_phone_alarm
-  - sensor.find_location
+  - device_tracker.phone_s7
+  - group.pj_phone_badges
   - media_player.galaxy_s7
+
+pj_phone_badges:
+  name: Phone Badges
+  entities:
+  - sensor.battery
+  - binary_sensor.pebble
+  - sensor.ringer
+  - sensor.notifications
+  - sensor.media
 
 docker:
   name: Docker
@@ -116,13 +134,32 @@ transmission_badges:
   - sensor.transmission_up_speed
 
 venus:
-  name: Venus
+  name: System
   entities:
   - sensor.disk_free_mntsulfur
   - sensor.disk_free_homephil
   - sensor.ram_free
   - sensor.since_last_boot
 
+pihole:
+  name: Pi-Hole
+  entities:
+  - sensor.pihole_ads_blocked_today
+  - sensor.pihole_dns_queries_today
+  - sensor.pihole_dns_unique_clients
+
+homeassistant:
+  name: Home Assistant
+  entities:
+  - updater.updater
+  - sensor.current_version
+  - sensor.ha_uptime
+  - script.zha_permit
+  - script.zwave_add
+  - script.zwave_heal
+  - zwave.sigma_designs_uzb_zwave_usb_adapter
+  - zwave.ecolink_garage_door_tilt_sensor
+  - zwave._
 
 office:
   name: Office
@@ -151,12 +188,14 @@ bedroom_view:
   icon: mdi:hotel
   view: yes
   entities:
+  - sensor.steps
   - binary_sensor.visonic_mct340_e_0b02b650_1
   - binary_sensor.visonic_mct340_e_0b02bcb4_1
   - binary_sensor.visonic_mct340_e_0b02b43c_1
   - group.pj_bedroom
   - group.pj_phone
   - group.pj_status
+  - group.pj_bedroom_scenes
   - group.pj_bedroom_auto
 
 basement_view:
@@ -183,7 +222,8 @@ server_view:
   entities:
   - group.venus
   - group.docker
-  - group.internetspeeds
+  - group.pihole
+  - group.homeassistant
   - sensor.speedtest_ping
   - sensor.fastcom_download
   - sensor.speedtest_download

@@ -1,0 +1,15 @@
+- platform: mqtt
+  state_topic: "zanzito/phone/battery_level"
+  name: "Battery"
+- platform: mqtt
+  state_topic: "stat/phone/volr"
+  name: "Ringer"
+- platform: mqtt
+  state_topic: "stat/phone/voln"
+  name: "Notifications"
+- platform: mqtt
+  state_topic: "stat/phone/volm"
+  name: "Media"
+- platform: mqtt
+  state_topic: "zanzito/phone/step_counter"
+  name: "Steps"

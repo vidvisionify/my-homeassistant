@@ -8,11 +8,7 @@ homeassistant:
   customize_glob: !include customize.yaml
 
 frontend:
-  themes:
-    red:
-      primary-color: "#f44336"
-    blue:
-      primary-color: "#03a9f4"
+  themes: !include devices/themes.yaml
 
 customizer:
   panel: true
@@ -26,7 +22,7 @@ http:
 updater:
 discovery:
 conversation:
-shopping_list:
+# shopping_list:
 history:
   exclude:
     domains:
@@ -54,6 +50,9 @@ sun:
 ######################
 ##### Components #####
 ######################
+zwave:
+  usb_path: /dev/ttyUSB0
+
 zha:
   usb_path: /dev/ttyUSB1
   database_path: zigbee.db
@@ -72,6 +71,10 @@ android_ip_webcam:
     switches:
       - torch
       - night_vision
+
+usps:
+  username: !secret usps_user
+  password: !secret usps_pass
 
 ring:
   username: !secret ring_user
@@ -132,6 +135,7 @@ sensor: !include_dir_merge_list devices/sensors/
 binary_sensor: !include devices/binary_sensors.yaml
 switch: !include devices/switches.yaml
 group: !include groups.yaml
+scene: !include scenes.yaml
 automation: !include_dir_merge_list auto/
 shell_command: !include devices/shell_commands.yaml
 input_select: !include devices/input_select.yaml

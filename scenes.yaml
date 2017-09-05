@@ -1,0 +1,24 @@
+  - name: High Bedroom
+    entities:
+      switch.bedroom_fan: on
+      light.sengled_e11g13_0306449a_1: on
+      light.sengled_z01cia19nae26_0303d1dd_1:
+        state: on
+        brightness: 255
+
+  - name: Low Bedroom
+    entities:
+      switch.bedroom_fan: on
+      light.sengled_e11g13_0306449a_1: off
+      light.sengled_z01cia19nae26_0303d1dd_1:
+        state: on
+        brightness: 10
+
+  - name: Bedtime
+    entities:
+      switch.bedroom_fan: on
+      automation.turn_off_fan_in_2_hours: on
+      light.sengled_e11g13_0306449a_1: off
+      light.sengled_z01cia19nae26_0303d1dd_1:
+        state: off
+      group.basement: off

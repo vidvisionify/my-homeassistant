@@ -7,7 +7,7 @@
     - motion
 
 - platform: ping
-  host: 10.0.0.182
+  host: garage.local
   name: GaragePi
 
 - platform: mqtt
@@ -15,7 +15,6 @@
   name: Alarm
   payload_on: "1"
   payload_off: "0"
-
 
 ##########################
 ###### PJ's Things #######
@@ -27,7 +26,6 @@
 - platform: ping
   host: 10.0.0.93
   name: Penn
-
 
 
 ##########################

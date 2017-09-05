@@ -3,7 +3,7 @@
     platform: homeassistant
     event: start
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: ":recycle: Restarted successfully."
-          target: 339272352611172355
+          message: "Back to business"
+          title: "Home Assistant Restarted."

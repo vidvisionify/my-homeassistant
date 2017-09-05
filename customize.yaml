@@ -21,6 +21,12 @@
 ######################
 ##### Home View ######
 ######################
+    light.garage:
+      icon: mdi:led-off
+      emulated_hue: true
+      emulated_hue_name: "garage"
+      extra_badge:
+        entity_id: binary_sensor.ecolink_garage_door_tilt_sensor_sensor
     binary_sensor.alarm:
       icon: mdi:security-home
     binary_sensor.ring_front_door_ding:
@@ -36,7 +42,7 @@
       custom_ui_state_card: custom-ui
       confirm_controls_show_lock: true
       extra_badge:
-        entity_id: binary_sensor.garagepi
+        entity_id: binary_sensor.sensor
     binary_sensor.den_tv:
       icon: mdi:television
       extra_badge:
@@ -79,6 +85,7 @@
     sun.sun:
       hidden: true
 
+
 ######################
 ####### Bedroom ######
 ######################
@@ -87,14 +94,14 @@
     binary_sensor.steam_link:
       icon: mdi:steam
     light.sengled_e11g13_0306449a_1:
-      friendly_name: Spotlight
+      friendly_name: Bar
       icon: mdi:spotlight-beam
       emulated_hue: true
-      emulated_hue_name: "spotlight"
+      emulated_hue_name: "bar"
 
 
     light.sengled_z01cia19nae26_0303d1dd_1:
-      friendly_name: Nightstand
+      friendly_name: Desk
       icon: mdi:lamp
       emulated_hue: true
 
@@ -120,10 +127,8 @@
       friendly_name: Bedroom
     binary_sensor.visonic_mct340_e_0b02b43c_1:
       friendly_name: Western Window
-      icon: mdi:window-closed
     binary_sensor.visonic_mct340_e_0b02bcb4_1:
       friendly_name: Northern Window
-      icon: mdi:window-closed
     binary_sensor.visonic_mct340_e_0b02c60a_1:
       friendly_name: Closet
 
@@ -132,6 +137,18 @@
 
     group.pj_bedroom_badges:
       state_card_mode: badges
+
+    group.pj_phone_badges:
+      state_card_mode: badges
+
+    scene.high_bedroom:
+      icon: mdi:brightness-7
+
+    scene.low_bedroom:
+      icon: mdi:brightness-4
+
+    scene.bedtime:
+      icon: mdi:hotel
 
     automation.bedroom__closet_off_in_2_minutes:
       icon: mdi:timer
@@ -145,18 +162,28 @@
 ######################
 ###### Basement ######
 ######################
-    light.desk:
-      friendly_name: Desk
+    light.nightstand:
+      friendly_name: Nightstand
       icon: mdi:lamp
+
+    switch.switch:
+      friendly_name: Monitors
+      icon: mdi:monitor-multiple
+      emulated_hue: true
 
     switch.candles:
       icon: mdi:candle
 
-    light.workspace:
-      icon: mdi:led-off
+    light.salt_lamp:
+      icon: mdi:alarm-light
       emulated_hue: true
-      emulated_hue_name: "workspace"
+      emulated_hue_name: "salt lamp"
 
+    light.corner_light:
+      icon: mdi:ceiling-light
+
+    switch.dehumidifier:
+      icon: mdi:water-percent
 
     binary_sensor.ps3:
       icon: mdi:playstation
@@ -230,6 +257,30 @@
       icon: mdi:download-network
       extra_badge:
         entity_id: sensor.transmission_status
+
+    sensor.ha_uptime:
+      friendly_name: Uptime
+      icon: mdi:clock-start
+    script.zha_permit:
+      friendly_name: Zigbee - Permit
+      icon: mdi:bug
+    script.zwave_add:
+      friendly_name: Z-Wave - Add Node
+      icon: mdi:server-plus
+    script.zwave_heal:
+      friendly_name: Z-Wave - Heal Network
+      icon: mdi:hospital
+
+    sensor.pihole_ads_blocked_today:
+      friendly_name: Ads Blocked Today
+      extra_badge:
+        entity_id: sensor.pihole_ads_percentage_blocked_today
+    sensor.pihole_ads_percentage_blocked_today:
+      friendly_name: Percent
+    sensor.pihole_dns_unique_clients:
+      friendly_name: Clients
+    sensor.pihole_dns_queries_today:
+      friendly_name: Queries Today
 
     sensor.transmission_status:
       friendly_name: Transmission

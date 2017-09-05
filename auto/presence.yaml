@@ -4,10 +4,10 @@
     entity_id: device_tracker.phone_s7
     to: "not_home"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: ":door: **PJ** has left. Turning off **Basement** and **Bedroom**."
-          target: 339272352611172355
+          message: "Turning off Basement and Bedroom"
+          title: "PJ has left."
       - service: homeassistant.turn_off
         data:
           entity_id: group.basement
@@ -21,10 +21,10 @@
     entity_id: device_tracker.phone_s7
     to: "home"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: ":house: **PJ** is home."
-          target: 339272352611172355
+          message: "-"
+          title: "Welcome Home."
 
 
 - alias: Notify - Phil is home
@@ -33,10 +33,10 @@
     entity_id: device_tracker.iphone
     to: "home"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: ":house: **Phil** is now home."
-          target: 339272352611172355
+          message: "-"
+          title: "Phil is home."
 
 - alias: Notify - Phil is away
   trigger:
@@ -44,7 +44,7 @@
     entity_id: device_tracker.iphone
     to: "not_home"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: ":door: **Phil** has left."
-          target: 339272352611172355
+          message: "-"
+          title: "Phil has left."

@@ -22,11 +22,11 @@
       entity_id: light.sengled_e11g13_0306574f_1
       to: 'on'
       for:
-        minutes: 2
+        minutes: 5
     action:
       - service: light.turn_off
         entity_id: light.sengled_e11g13_0306574f_1
       - service: notify.pj_phone
         data:
-          message: >
-            You left the closet open! Light has been turned off.
+          message: "Seems like the closet was open for 5 minutes."
+          title: "Closet turned off."

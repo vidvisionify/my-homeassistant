@@ -4,10 +4,10 @@
     entity_id: binary_sensor.garagepi
     to: "off"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: "GaragePi is **Offline**! Garage can only be opened with physical buttons."
-          target: 339272352611172355
+          message: "Garage can only be opened with physical buttons."
+          title: "GaragePi is Offline."
 
 - alias: Notify - If GaragePi is back
   trigger:
@@ -15,7 +15,7 @@
     entity_id: binary_sensor.garagepi
     to: "on"
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: "GaragePi is back **Online**!"
-          target: 339272352611172355
+          message: "Garage can be opened with Home Assistant and physical buttons."
+          title: "GaragePi is back online."

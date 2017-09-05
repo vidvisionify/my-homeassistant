@@ -1,10 +1,10 @@
-- alias: PC is Away
+- alias: PC is Snoozed
   trigger:
     platform: state
     entity_id: sensor.steam_76561198039826665
-    to: 'snooze'
+    to: 'Snooze'
   action:
-      - service: notify.discord
+      - service: notify.pj_phone
         data:
-          message: "**@PJ**, **Pandorica** has been away for over an hour. You should probably put it to sleep."
-          target: 339272352611172355
+          message: "You should probably put it to sleep."
+          title: "Pandorica is idle"

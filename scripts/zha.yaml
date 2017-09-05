@@ -1,0 +1,3 @@
+zha_permit:
+  sequence:
+  - service: zha.permit

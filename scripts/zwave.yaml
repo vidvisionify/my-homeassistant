@@ -1,0 +1,7 @@
+zwave_add:
+  sequence:
+  - service: zha.add_node
+
+zwave_heal:
+  sequence:
+  - service: zha.heal_network
